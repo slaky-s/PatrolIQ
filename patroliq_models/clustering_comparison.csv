@@ -1,0 +1,4 @@
+Algorithm,Configuration,Clusters,Noise_Percentage,Silhouette_Score,Davies_Bouldin_Index,Evaluation_Sample
+K-Means,K=8,8,0.0,0.039,2.4327,"23,315 geographic cells"
+DBSCAN,"eps=7.0, min_samples=10",2,2.11,0.4178,0.8833,"23,315 geographic cells"
+Hierarchical,"K=8, Ward linkage",8,0.0,0.0328,2.3158,"5,000 geographic cells"
