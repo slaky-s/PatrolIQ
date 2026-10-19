@@ -28,7 +28,9 @@ st.set_page_config(
 # PATHS
 # ============================================================
 
-MODEL_DIR = "patroliq_models"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_DIR = os.path.join(BASE_DIR, "patroliq_models")
+VISUALIZATION_DIR = os.path.join(BASE_DIR, "mlflow_visualizations")
 
 
 # ============================================================
@@ -352,10 +354,7 @@ if page == "Overview":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -412,10 +411,7 @@ elif page == "Crime Analysis":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -448,10 +444,7 @@ elif page == "Crime Analysis":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -487,10 +480,7 @@ elif page == "Crime Analysis":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -685,10 +675,7 @@ elif page == "Clustering":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -867,10 +854,7 @@ elif page == "Dimensionality Reduction":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -883,30 +867,28 @@ elif page == "Dimensionality Reduction":
     )
 
     pca_image = os.path.join(
-        "mlflow_visualizations",
+        VISUALIZATION_DIR,
         "pca_2d_kmeans.png"
     )
 
     if os.path.exists(pca_image):
-        st.image(
-            pca_image,
-            use_container_width=True
-        )
+        st.image(pca_image, use_container_width=True)
+    else:
+        st.warning(f"PCA image not found: {pca_image}")
 
     st.subheader(
         "t-SNE Projection"
     )
 
     tsne_image = os.path.join(
-        "mlflow_visualizations",
+        VISUALIZATION_DIR,
         "tsne_kmeans.png"
     )
 
     if os.path.exists(tsne_image):
-        st.image(
-            tsne_image,
-            use_container_width=True
-        )
+        st.image(tsne_image, use_container_width=True)
+    else:
+        st.warning(f"t-SNE image not found: {tsne_image}")
 
 
 # ============================================================
@@ -970,10 +952,7 @@ elif page == "Model Evaluation":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
@@ -1006,10 +985,7 @@ elif page == "Model Evaluation":
 
     plt.tight_layout()
 
-    st.pyplot(
-        fig,
-        use_container_width=True
-    )
+    st.pyplot(fig, use_container_width=True)
 
     plt.close(fig)
 
