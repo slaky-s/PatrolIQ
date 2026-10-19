@@ -354,7 +354,7 @@ if page == "Overview":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -411,7 +411,7 @@ elif page == "Crime Analysis":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -444,7 +444,7 @@ elif page == "Crime Analysis":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -480,7 +480,7 @@ elif page == "Crime Analysis":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -552,7 +552,7 @@ elif page == "Geographic Analysis":
 
     st.dataframe(
         top_cells[display_columns],
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -604,7 +604,7 @@ elif page == "Clustering":
 
     st.dataframe(
         comparison,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -675,7 +675,7 @@ elif page == "Clustering":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -685,7 +685,7 @@ elif page == "Clustering":
 
     st.dataframe(
         kmeans_profile,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -721,7 +721,7 @@ elif page == "Clustering":
 
     st.dataframe(
         dbscan_profile,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -854,7 +854,7 @@ elif page == "Dimensionality Reduction":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -872,7 +872,7 @@ elif page == "Dimensionality Reduction":
     )
 
     if os.path.exists(pca_image):
-        st.image(pca_image, use_container_width=True)
+        st.image(pca_image, width="stretch")
     else:
         st.warning(f"PCA image not found: {pca_image}")
 
@@ -886,7 +886,7 @@ elif page == "Dimensionality Reduction":
     )
 
     if os.path.exists(tsne_image):
-        st.image(tsne_image, use_container_width=True)
+        st.image(tsne_image, width="stretch")
     else:
         st.warning(f"t-SNE image not found: {tsne_image}")
 
@@ -919,7 +919,7 @@ elif page == "Model Evaluation":
 
     st.dataframe(
         comparison,
-        use_container_width=True,
+        width="stretch",
         hide_index=True
     )
 
@@ -952,7 +952,7 @@ elif page == "Model Evaluation":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
@@ -985,7 +985,7 @@ elif page == "Model Evaluation":
 
     plt.tight_layout()
 
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, width="stretch")
 
     plt.close(fig)
 
