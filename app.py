@@ -1011,3 +1011,31 @@ st.sidebar.divider()
 st.sidebar.caption(
     "PatrolIQ • Aggregate reported-crime analytics"
 )
+# TEMPORARY CLOUD DIAGNOSTICS
+import os
+import matplotlib.pyplot as plt
+import streamlit as st
+
+st.divider()
+st.header("Temporary Cloud Rendering Diagnostics")
+
+st.write("Python version:", __import__("sys").version)
+st.write("Streamlit version:", st.__version__)
+st.write("App directory:", BASE_DIR)
+st.write("Visualization directory:", VISUALIZATION_DIR)
+
+for filename in ["pca_2d_kmeans.png", "tsne_kmeans.png"]:
+    filepath = os.path.join(VISUALIZATION_DIR, filename)
+    st.write(f"**{filename}**")
+    st.write("File exists:", os.path.isfile(filepath))
+
+    if os.path.isfile(filepath):
+        st.image(filepath, width="stretch")
+
+st.subheader("Matplotlib Rendering Test")
+
+fig, ax = plt.subplots()
+ax.bar(["A", "B", "C"], [3, 5, 2])
+ax.set_title("Cloud Test Chart")
+st.pyplot(fig, width="stretch")
+plt.close(fig)
