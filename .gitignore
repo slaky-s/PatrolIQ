@@ -1,0 +1,39 @@
+# ==========================================
+# PatrolIQ - Smart Safety Analytics Platform
+# ==========================================
+
+# Large raw crime dataset
+Crimes_-_2001_to_Present_*.csv
+*.csv.zip
+
+# MLflow tracking files
+mlflow.db
+mlruns/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log
